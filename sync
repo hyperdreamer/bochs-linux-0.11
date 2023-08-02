@@ -1,4 +1,5 @@
 #!/bin/bash
 
+git pull
 cd ../linux-0.11
 git pull
