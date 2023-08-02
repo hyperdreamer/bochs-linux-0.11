@@ -1,0 +1,8 @@
+boot.img
+hd.img
+System.map
+debugger_log.txt
+bochs_commands
+bochsout.txt
+bx_enh_dbg.ini
+parport.out

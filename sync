@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ../linux-0.11
+git pull
