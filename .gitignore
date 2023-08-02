@@ -1,6 +1,3 @@
-boot.img
-hd.img
-System.map
 debugger_log.txt
 bochs_commands
 bochsout.txt
