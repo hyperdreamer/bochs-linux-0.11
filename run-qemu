@@ -1,0 +1,10 @@
+#!/bin/bash
+
+make
+machine="-cpu pentium3 -m 16M"
+boot="-boot a"
+floppy="-drive file=boot.img,index=0,if=floppy,format=raw"
+hd="-drive file=hd-qemu.img,index=0,media=disk,format=raw"
+#gdb="-s -S"
+
+qemu-system-i386 $machine $boot $floppy $hd $gdb
