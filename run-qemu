@@ -1,10 +1,12 @@
 #!/bin/bash
 
 make
-machine="-cpu pentium3 -m 16M"
+#machine="-cpu pentium3 -m 16M"
+machine="-smp cpus=4,cores=1 -m 16M"
 boot="-boot a"
 floppy="-drive file=boot.img,index=0,if=floppy,format=raw"
-hd="-drive file=hd-qemu.img,index=0,media=disk,format=raw"
+hd="-drive file=hd-bochs.img,index=0,media=disk,format=raw"
 #gdb="-s -S"
 
-qemu-system-i386 $machine $boot $floppy $hd $gdb
+#qemu-system-i386 $machine $boot $floppy $hd $gdb
+qemu-system-x86_64 $machine $boot $floppy $hd $gdb
