@@ -6,7 +6,9 @@ machine="-cpu pentium3 -m 16M"
 boot="-boot a"
 floppy="-drive file=boot.img,index=0,if=floppy,format=raw"
 hd="-drive file=hd-bochs.img,index=0,media=disk,format=raw"
-#gdb="-s -S"
+debug="-debugcon stdio"   # e9 magic
+#debug+=" -s -S"
 
-qemu-system-i386 $machine $boot $floppy $hd $gdb
-#qemu-system-x86_64 $machine $boot $floppy $hd $gdb
+
+qemu-system-i386 $machine $boot $floppy $hd $debug
+#qemu-system-x86_64 $machine $boot $floppy $hd $debug
