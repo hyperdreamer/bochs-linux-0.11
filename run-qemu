@@ -5,10 +5,11 @@ machine="-cpu pentium3 -m 16M"
 #machine="-smp cpus=4,cores=1 -m 16M"
 boot="-boot a"
 floppy="-drive file=boot.img,index=0,if=floppy,format=raw"
-hd="-drive file=hd-bochs.img,index=0,media=disk,format=raw"
+hd0="-drive file=hd0.img,index=0,media=disk,format=raw"
+hd1="-drive file=hd1.img,index=1,media=disk,format=raw"
+hd="$hd0 $hd1"
 debug="-debugcon stdio"   # e9 magic
 #debug+=" -s -S"
-
 
 qemu-system-i386 $machine $boot $floppy $hd $debug
 #qemu-system-x86_64 $machine $boot $floppy $hd $debug
